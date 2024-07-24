@@ -30,6 +30,11 @@ do{
             saida = true;
 
         break;
+
+        default:
+            console.log("Escreva novamente.");
+            resposta = "";
+            
     }
 } while(!saida);
 
