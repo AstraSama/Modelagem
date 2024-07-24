@@ -5,13 +5,18 @@ let save = [];
 let saida = false;
 
 do{
-    let resposta = prompt("'ADD', 'UP', 'RM', 'Q'. Resposta: ").toLowerCase().trim();
+    let resposta = prompt("'ADD', 'LS', 'UP', 'RM', 'Q'. Resposta: ").toLowerCase().trim();
     
     switch (resposta) {
         case "add":
             save.push(CREATE());
             resposta = "";
             
+        break;
+
+        case 'ls':
+            console.log("Lista:", save);
+
         break;
             
         case "up":
@@ -34,8 +39,6 @@ do{
         default:
             console.log("Escreva novamente.");
             resposta = "";
-            
+
     }
 } while(!saida);
-
-console.log("Lista final:", save);
